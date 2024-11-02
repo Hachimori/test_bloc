@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_hachimori/bloc_cubit/bloc_cubit_counter_page.dart';
 import 'package:flutter_application_hachimori/initial_feature/initial_counter_page.dart';
 
 void main() {
@@ -41,6 +42,12 @@ class InitialPage extends StatelessWidget {
                 Navigator.of(context).push<void>(InitialCounterPage.route());
               },
               child: const Text('Open Counter Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push<void>(BlocCubitCounterPage.route());
+              },
+              child: const Text('Open Bloc Cubit Counter Page'),
             ),
           ],
         )
